@@ -1,0 +1,44 @@
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    light.showAnimation(light.sparkleAnimation, 2000)
+})
+forever(function () {
+    music.setVolume(255)
+    if (input.touchA1.isPressed()) {
+        music.playTone(262, music.beat(BeatFraction.Whole))
+        light.showRing(
+        `white red red red red red red red red red`
+        )
+    } else if (input.touchA2.isPressed()) {
+        music.playTone(294, music.beat(BeatFraction.Whole))
+        light.showRing(
+        `white white red red red red red red red red`
+        )
+    } else if (input.touchA3.isPressed()) {
+        music.playTone(330, music.beat(BeatFraction.Whole))
+        light.showRing(
+        `white white white red red red red red red red`
+        )
+    } else if (input.touchA4.isPressed()) {
+        light.showRing(
+        `white white white white red red red red red red`
+        )
+        music.playTone(349, music.beat(BeatFraction.Whole))
+    } else if (input.touchA5.isPressed()) {
+        light.showRing(
+        `white white white white white red red red red red`
+        )
+        music.playTone(392, music.beat(BeatFraction.Whole))
+    } else if (input.touchA6.isPressed()) {
+        light.showRing(
+        `white white white white white white red red red red`
+        )
+        music.playTone(440, music.beat(BeatFraction.Whole))
+    } else if (input.touchA7.isPressed()) {
+        light.showRing(
+        `white white white white white white white red red red`
+        )
+        music.playTone(494, music.beat(BeatFraction.Whole))
+    } else {
+        music.stopAllSounds()
+    }
+})
